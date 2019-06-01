@@ -7,6 +7,10 @@ Modeling approach:
   
 Run with python 2 or 3, for the example coded up in in __main__, via
   python petri_net.py --firings 10 --marking 1 2 3 2
+  
+References:
+ * https://en.wikipedia.org/wiki/Petri_net
+ * https://www.amazon.com/Understanding-Petri-Nets-Modeling-Techniques/dp/3642332773
 """
 
 class Place:
