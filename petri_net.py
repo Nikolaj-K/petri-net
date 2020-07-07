@@ -69,7 +69,8 @@ class Transition:
         """
         Fire!
         """  
-        not_blocked = all(arc.non_blocking() for arc in self.out_arcs) # Note: Has to be checked differently for arcs that compete for holdings
+        not_blocked = all(arc.non_blocking() for arc in self.out_arcs) 
+        # Note: Has to be checked differently for arcs that compete for holdings.
         if not_blocked:
             for arc in self.arcs:
                 arc.trigger()
