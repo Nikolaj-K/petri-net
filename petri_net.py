@@ -70,7 +70,8 @@ class Transition:
         Fire!
         """  
         not_blocked = all(arc.non_blocking() for arc in self.out_arcs) 
-        # Note: Has to be checked differently for arcs that compete for holdings.
+        # Note: This would have to be checked differently for variants of
+        # petri  nets that take more than once from a place, per transition.
         if not_blocked:
             for arc in self.arcs:
                 arc.trigger()
